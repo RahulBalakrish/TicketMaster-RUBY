@@ -1,0 +1,462 @@
+<div class="container">
+  <div data-controller="filter-dropdown" class="flex p-4">
+    <div class="bg-white">
+  <div>
+    <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
+      <div class="fixed inset-0 z-40 flex">
+        <div class="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+          <div class="flex items-center justify-between px-4">
+            <h2 class="text-lg font-medium text-gray-900">Filters</h2>
+            <button type="button" class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Filters -->
+          <form class="mt-4 border-t border-gray-200">
+            <h3 class="sr-only">Categories</h3>
+            <ul role="list" class="px-2 py-3 font-medium text-gray-900">
+              <li>
+                <a href="#" class="block px-2 py-3">Totes</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Backpacks</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Travel Bags</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Hip Bags</a>
+              </li>
+              <li>
+                <a href="#" class="block px-2 py-3">Laptop Sleeves</a>
+              </li>
+            </ul>
+
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-0" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Color</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-0">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-0" name="color[]" value="white" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-0" class="ml-3 min-w-0 flex-1 text-gray-500">White</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-1" name="color[]" value="beige" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-1" class="ml-3 min-w-0 flex-1 text-gray-500">Beige</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-2" name="color[]" value="blue" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-2" class="ml-3 min-w-0 flex-1 text-gray-500">Blue</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-3" name="color[]" value="brown" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-3" class="ml-3 min-w-0 flex-1 text-gray-500">Brown</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-4" name="color[]" value="green" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-4" class="ml-3 min-w-0 flex-1 text-gray-500">Green</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-color-5" name="color[]" value="purple" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-color-5" class="ml-3 min-w-0 flex-1 text-gray-500">Purple</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-1" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Category</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-1">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-0" name="category[]" value="new-arrivals" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-0" class="ml-3 min-w-0 flex-1 text-gray-500">New1 Arrivals</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-1" name="category[]" value="sale" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-1" class="ml-3 min-w-0 flex-1 text-gray-500">Sale</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-2" name="category[]" value="travel" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-2" class="ml-3 min-w-0 flex-1 text-gray-500">Travel</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-3" name="category[]" value="organization" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-3" class="ml-3 min-w-0 flex-1 text-gray-500">Organization</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-category-4" name="category[]" value="accessories" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-category-4" class="ml-3 min-w-0 flex-1 text-gray-500">Accessories</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-6">
+              <h3 class="-mx-2 -my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <button type="button" class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500" aria-controls="filter-section-mobile-2" aria-expanded="false">
+                  <span class="font-medium text-gray-900">Size</span>
+                  <span class="ml-6 flex items-center">
+                    <!-- Expand icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <!-- Collapse icon, show/hide based on section open state. -->
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+              <div class="pt-6" id="filter-section-mobile-2">
+                <div class="space-y-6">
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-0" name="size[]" value="2l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-0" class="ml-3 min-w-0 flex-1 text-gray-500">2L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-1" name="size[]" value="6l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-1" class="ml-3 min-w-0 flex-1 text-gray-500">6L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-2" name="size[]" value="12l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-2" class="ml-3 min-w-0 flex-1 text-gray-500">12L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-3" name="size[]" value="18l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-3" class="ml-3 min-w-0 flex-1 text-gray-500">18L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-4" name="size[]" value="20l" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-4" class="ml-3 min-w-0 flex-1 text-gray-500">20L</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="filter-mobile-size-5" name="size[]" value="40l" type="checkbox" checked class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                    <label for="filter-mobile-size-5" class="ml-3 min-w-0 flex-1 text-gray-500">40L</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <main class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex items-baseline justify-between  pb-3 pt-3 max-w-full" >
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Orders</h1>
+        
+        <div class="flex items-center">
+           <%= form_tag(internal_orders_path, method: :get, id: 'orderListFilterForm', class: 'flex gap-3 items-center', data: { turbo_frame: "order_list", controller:'orders-filter' }) do %>
+         <input type="text" name="search" placeholder= "Search by email or MVA or Vehicle ID" id='filterInput' class= "input input-bordered rounded border border-gray-300 rounded-lg" style="width: 15rem; margin-left:40px; margin-right: 5px; height: 2.5rem" data-action= 'change->orders-filter#markFieldsDirty'> 
+        <%= link_to "Export_results_as_.xlxs", order_export_internal_orders_path(params_for_export.merge(format: :xlsx)), class: "inline-block bg-gray-100 rounded border border-gray-300 rounded-lg font-normal text-base text-gray-600 py-2 px-4 hover:bg-gray-200", style: "height: 2.5rem", id: "export-button" %>
+         <% end %>
+        </div>
+      </div>
+      <section aria-labelledby="orders-heading" class="pb-2 pt-3 max-w-full">
+        <h2 id="orders-heading" class="sr-only">Orders</h2>
+
+        <div class="grid grid-cols-1 gap-y-10 lg:grid-cols-4 pb-0">
+          <!-- Filters -->
+          <div class= "filters border border-gray-300 rounded-3xl scrollable overflow-y-auto duration-300 ease-out h-[740px] ">
+            <form class="hidden lg:block px-6 ">
+              <div class="border-b border-gray-200 py-6 " >
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Category</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+                  <%= render 'internal/orders/filter_dropdown',
+                  field_name: 'Category',
+                  dropdown_label: 'Category',
+                  options: Order.categories,
+                  selected_options: params[:category] || [] %>
+              </div>
+              <div class="border-b border-gray-200 py-6 " >
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Status</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+                  <%= render 'internal/orders/filter_dropdown',
+                  field_name: 'statuses',
+                  dropdown_label: 'Status',
+                  options: Order.statuses,
+                  selected_options: params[:statuses] || [] %>
+              </div>
+              <div class="border-b border-gray-200 py-6">
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Market</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+                  <%= render 'internal/orders/filter_dropdown',
+                      field_name: 'markets',
+                      dropdown_label: 'Markets',
+                      options: Market.all.map { |m| [m.name, m.id] }.to_h,
+                      selected_options: params[:markets] || [],
+                      id_prefix: 'market' %>
+              </div>
+              <div class="border-b border-gray-200 py-6">
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-2" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Fulfillment</span>
+                    <span class="ml-6 flex items-center">
+                     <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>
+                <%= render 'internal/orders/filter_dropdown',
+                  field_name: 'combined_fulfillment_type',
+                  dropdown_label: 'Type',
+                  options: %w[Pickup Swap Return Delivery],
+                  selected_options: params[:combined_fulfillment_type] || [],
+                  id_prefix: 'fulfillment_type' %>
+              </div>
+              <div class="border-b border-gray-200 py-6">
+                <h3 class="-my-3 flow-root">
+                  
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Lot</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>          
+                <%= render 'internal/orders/filter_dropdown',
+                    field_name: 'lots',
+                    dropdown_label: 'Lots',
+                    options: Lot.all.map { |lot| [lot.name, lot.id] }.to_h,
+                    selected_options: params[:lots] || [],
+                    id_prefix: 'lot' %>
+              </div>
+              <div class="border-b border-gray-200 py-6">
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Created at</span>
+                    <span class="ml-6 flex items-center">
+                     <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3> 
+                <div id="filterSection" class="hidden">
+                  <div class="pt-4 pb-4 relative"> 
+                  <label for="created_at_start" class="block text-gray-700">From:</label>
+                  <%= date_field_tag :created_at_start, params[:created_at_start], class: "input input-bordered w-full", data:{action:'change->orders-filter#markFieldsDirty'}, placeholder: "From" %>
+                  </div>
+                <div class= "relative">
+                  <label for="created_at_end" class="block text-gray-700">To:</label>
+                  <%= date_field_tag :created_at_end, params[:created_at_end], class: "input input-bordered w-full",placeholder: "To" ,  data:{action:'change->orders-filter#markFieldsDirty'} %>
+                </div>  
+                </div>         
+              </div>
+              <div class="border-b border-gray-200 py-6">
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Appointment date</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>          
+                <div id="filterSection" class="hidden">
+                  <div class="pt-4 pb-4 relative"> 
+                  <label for="appointment_date_start" class="block text-gray-700">From:</label>
+                  <%= date_field_tag :appointment_date_start, params[:appointment_date_start], class: "input input-bordered w-full", data:{action:'change->orders-filter#markFieldsDirty'}, placeholder: "From" %>
+                  </div>
+                <div class= "relative">
+                  <label for="appointment_date_end" class="block text-gray-700">To:</label>
+                  <%= date_field_tag :appointment_date_end, params[:appointment_date_end], class: "input input-bordered w-full",  data:{action:'change->orders-filter#markFieldsDirty'} %>
+                </div>  
+                </div> 
+              </div>
+              <div class=" py-6">
+                <h3 class="-my-3 flow-root">
+                  <!-- Expand/collapse section button -->
+                  <button type="button" id="toggleButton" class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-1" aria-expanded="true">
+                    <span class="font-medium text-gray-900 text-base">Fulfilled at</span>
+                    <span class="ml-6 flex items-center">
+                      <!-- Expand icon (+), shown when collapsed -->
+                      <svg id="iconExpand" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                      </svg>
+                      <!-- Collapse icon (-), hidden by default, shown when expanded -->
+                      <svg id="iconCollapse" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path d="M5.25 10a.75.75 0 000 1.5h9.5a.75.75 0 000-1.5h-9.5z" />
+                      </svg>
+                    </span>
+                  </button>
+                </h3>  
+                <div id="filterSection" class="hidden">
+                  <div class="pt-4 pb-4 relative"> 
+                  <label for="fulfilled_at_start" class="block text-gray-700">From:</label>
+                  <%= date_field_tag :fulfilled_at_start, params[:fulfilled_at_start], class: "input input-bordered w-full", data:{action:'change->orders-filter#markFieldsDirty'}, placeholder: "From" %>
+                  </div>
+                <div class= "relative">
+                  <label for="fulfilled_at_end" class="block text-gray-700">To:</label>
+                  <%= date_field_tag :fulfilled_at_end, params[:fulfilled_at_end], class: "input input-bordered w-full",  data:{action:'change->orders-filter#markFieldsDirty'} %>
+                </div>  
+                </div>  
+                 </div>
+                 <div class="flex flex-col gap-4" style="margin:10px">
+                    <%= submit_tag "Filter", class: "btn btn-primary inline-block text-black font-bold py-2 px-4 rounded ",id:"form-submit", disabled: true, data:{orders_filter_target:"filterButton", action:"submit->orders-filter#markFieldsClean"} %>
+                    <%= link_to "Clear Filters", internal_orders_path, class: "btn btn-primary inline-block bg-gray-200 text-black font-bold py-2 px-4 rounded" %>
+                  </div>
+              </form>
+          </div>
+
+          <!-- Product grid -->
+          <div class="lg:col-span-3 ", x-data="{ sortDirection: 'asc', sortColumn: 'created_at' }">
+            <div class="lg:col-span-3 max-w-full max-h-[75vh] overflow-x-auto overflow-y-auto scrollable border border-gray-300 rounded-3xl ">
+              <!-- Your content -->
+              <table id="table" class="table">
+                <thead>
+                  <tr>
+                    <th class="table_header text-left font-normal text-base text-gray-500 tracking-wider cursor-pointer", @click="sortColumn = 'name'; sortDirection = sortDirection === 'asc' ? 'desc' : 'asc'" scope="col">
+                      ID
+                    </th>
+                    <th class="table_header text-left font-normal text-base text-gray-500 tracking-wider">Account</th>
+                    <th class="table_header  text-left font-normal text-base text-gray-500 tracking-wider">Status</th>
+                    <th class="table_header text-left font-normal text-base text-gray-500 tracking-wider">Type</th>
+                    <th class="table_header  text-left font-normal text-base text-gray-500 tracking-wider">Market</th>
+                    <th class="table_header  text-left font-normal text-base text-gray-500 tracking-wider">Lot</th>
+                    <th class="table_header  text-left font-normal text-base text-gray-500 tracking-wider">Vehicle</th>
+                    <th class="table_header  text-left font-normal text-base text-gray-500 tracking-wider">Appointment time</th>
+                    <th class="table_header text-left font-normal text-base text-gray-500 tracking-wider">Created At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%= render partial: 'internal/orders/order', collection: @orders, as: :order %>
+                </tbody>
+              </table>
+            </div>
+              <div class="pt-6">
+                <%= render 'shared/components/pagination', resource: @orders %>
+              </div>          
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+  </div>
+  
+  
+</div>
+<style src="https://cdn.jsdelivr.net/npm/alpinejs" defer>
+    .scrollable {
+      -ms-overflow-style: none;  
+      scrollbar-width: none;  
+    }
+    .scrollable::-webkit-scrollbar {
+      display: none;  
+    }
+    .filters{
+      width: 85%;
+    }
+    .table_header{
+      padding: 1.2rem;
+    }
+</style>

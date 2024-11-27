@@ -1,0 +1,2 @@
+# config/initializers/stripe.rb
+Stripe.api_key = 'sk_test_51PvgSyP651cGMFPe7gCH0hATawdAJu292kVC7LqGVEB7jNQ18Xml21mZpzxAheclFENJtOodoro6ihWzlbEMTJfS00lGeBUuyA'
